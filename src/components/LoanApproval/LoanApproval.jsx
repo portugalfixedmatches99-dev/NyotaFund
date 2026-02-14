@@ -29,7 +29,7 @@ const loan = location.state?.formData;
 
   
 
-  const tillNumber = '9179737'; 
+  const tillNumber = '9178919'; 
 
   const loanOffers = [
     { id: 1, amount: 2500, verificationFee: 150, duration: '2 months', interest: '10%' },
