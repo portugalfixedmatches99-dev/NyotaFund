@@ -1,101 +1,53 @@
-/* Navbar sticky */
-.navbar {
-  position: sticky; /* sticks on scroll */
-  top: 0;
-  z-index: 999;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 60px;
-  background-color: white;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-}
-
-/* Logo wrapper */
-.logo-wrapper {
-  display: flex;
-  align-items: center;
-  gap: 10px; /* space between circle and text */
-}
-
-/* Logo circle */
-.logo-circle {
-  width: 50px;
-  height: 50px;
-  background-color: #22c55e; /* green background */
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  font-weight: 700;
-  font-size: 20px;
+/* Hide hamburger on desktop */
+.hamburger {
+  display: none;
+  flex-direction: column;
   cursor: pointer;
+  gap: 5px;
 }
 
-/* Logo text */
-.logo-text {
-  font-weight: 700;
-  font-size: 20px;
-  color: #2563eb; /* blue text */
-}
-
-/* Nav links */
-.nav-links {
-  display: flex;
-  list-style: none;
-  gap: 30px;
-}
-
-.nav-links li {
-  cursor: pointer;
-  font-weight: 500;
-  transition: color 0.3s;
-}
-
-.nav-links li:hover {
-  color: #22c55e; /* green hover to match logo */
-}
-
-/* Buttons */
-.nav-actions {
-  display: flex;
-  gap: 15px;
-}
-
-.outline-btn {
-  padding: 10px 18px;
-  border: 1px solid #e5e7eb;
-  background: transparent;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background 0.3s, color 0.3s;
-}
-
-.outline-btn:hover {
-  background: #f3f4f6;
-}
-
-.primary-btn {
-  padding: 10px 20px;
+.hamburger span {
+  width: 25px;
+  height: 3px;
   background: #2563eb;
-  color: white;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background 0.3s;
+  border-radius: 2px;
 }
 
-.primary-btn:hover {
-  background: #1d4ed8;
-}
-
-/* Responsive */
+/* Mobile styles */
 @media (max-width: 768px) {
   .navbar {
     padding: 15px 20px;
+    flex-wrap: wrap; /* allow wrapping */
   }
 
-  .nav-links {
-    gap: 15px;
+  /* Hide nav-links and actions by default */
+  .nav-links,
+  .nav-actions {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  /* Show when menu is active */
+  .nav-links.active,
+  .nav-actions.active {
+    display: flex;
+  }
+
+  /* Show hamburger */
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-links li {
+    text-align: center;
+    padding: 10px 0;
+    font-size: 18px;
+  }
+
+  .nav-actions button {
+    width: 100%;
   }
 }

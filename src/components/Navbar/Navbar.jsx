@@ -1,33 +1,38 @@
-import "./Navbar.css";
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import "./Navbar.css";
 
 export default function Navbar() {
-
   const navigate = useNavigate();
+  const [menuOpen, setMenuOpen] = useState(false);
 
-   const handleApplyClick = () => {
-    navigate("/apply"); 
-  };
+  const handleApplyClick = () => navigate("/apply");
+  const handleLogoClick = () => navigate("/login");
+  const toggleMenu = () => setMenuOpen(!menuOpen);
 
-  const Click = () => {
-    navigate("/login"); 
-  };
   return (
     <nav className="navbar">
-     <div className="logo-wrapper">
-        <div className="logo-circle" onClick={Click}>IN</div>
+      <div className="logo-wrapper">
+        <div className="logo-circle" onClick={handleLogoClick}>IN</div>
         <div className="logo-text" onClick={handleApplyClick}>Inua Fund</div>
       </div>
 
-      <ul className="nav-links">
+      <div className={`nav-links ${menuOpen ? "active" : ""}`}>
         <li onClick={handleApplyClick}>How it works</li>
         <li onClick={handleApplyClick}>Features</li>
         <li onClick={handleApplyClick}>About</li>
-      </ul>
+      </div>
 
       <div className="nav-actions">
         <button className="outline-btn" onClick={handleApplyClick}>Check Status</button>
         <button className="primary-btn" onClick={handleApplyClick}>Apply Now</button>
+      </div>
+
+      {/* Hamburger */}
+      <div className="hamburger" onClick={toggleMenu}>
+        <span></span>
+        <span></span>
+        <span></span>
       </div>
     </nav>
   );
