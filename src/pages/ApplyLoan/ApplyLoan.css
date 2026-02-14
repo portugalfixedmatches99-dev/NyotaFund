@@ -1,0 +1,127 @@
+.apply-loan {
+  max-width: 500px;
+  margin: 50px auto;
+  padding: 30px;
+  background: #f5f7fa;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.apply-loan:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+
+.apply-loan h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #0d6efd;
+  font-size: 1.8rem;
+}
+
+.apply-loan p {
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.apply-loan button {
+  display: block;
+  width: 100%;
+  padding: 14px;
+  margin: 15px 0;
+  background-color: #0d6efd;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.apply-loan button:hover {
+  background-color: #0b5ed7;
+}
+
+.loan-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.loan-form label {
+  margin-bottom: 15px;
+  font-weight: 500;
+}
+
+.loan-form input,
+.loan-form select {
+  width: 100%;
+  padding: 12px;
+  margin-top: 5px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.loan-form input:focus,
+.loan-form select:focus {
+  outline: none;
+  border-color: #0d6efd;
+  box-shadow: 0 0 8px rgba(13, 110, 253, 0.3);
+}
+
+.loan-form button[type="submit"] {
+  margin-top: 20px;
+  background-color: #198754;
+}
+
+.loan-form button[type="submit"]:hover {
+  background-color: #157347;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .apply-loan {
+    margin: 20px;
+    padding: 20px;
+  }
+
+  .apply-loan h2 {
+    font-size: 1.5rem;
+  }
+
+  .loan-form input,
+  .loan-form select {
+    padding: 10px;
+  }
+}
+
+
+
+/* Recent Loans Ticker */
+.loan-ticker {
+  height: 200px; /* adjust height */
+  overflow: hidden;
+  margin: 20px 0;
+  border-radius: 12px;
+  background: #ffffff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+}
+
+.recent-loan {
+  padding: 10px 15px;
+  border-bottom: 1px solid #e5e7eb;
+  display: flex;
+  justify-content: space-between;
+  font-weight: 500;
+  background: linear-gradient(to right, #f0f5ff, #f5f7fa);
+  transition: transform 0.3s;
+}
+
+.recent-loan:last-child {
+  border-bottom: none;
+}

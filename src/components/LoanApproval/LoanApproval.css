@@ -1,0 +1,313 @@
+/* ---------------- Container ---------------- */
+.approval-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  background-color: #f5f7fa;
+  padding: 30px 10px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* ---------------- Card ---------------- */
+.approval-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+  width: 100%;
+  max-width: 480px;
+  padding: 20px 25px;
+  box-sizing: border-box;
+}
+
+/* ---------------- Header ---------------- */
+.approval-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.approval-header h2 {
+  color: #1b6ca8;
+  margin-bottom: 5px;
+}
+
+.approval-header p {
+  background-color: #1b6ca8;
+  color: #fff;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 0.9rem;
+}
+
+/* ---------------- Loan Options ---------------- */
+.loan-options h4 {
+  color: #1b6ca8;
+  margin-bottom: 10px;
+}
+
+.loan-option-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 15px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.loan-option-card.selected {
+  border-color: #1b6ca8;
+  background-color: #e6f0f8;
+}
+
+.get-loan-btn {
+  width: 100%;
+  padding: 12px 0;
+  background: #1b6ca8;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: all 0.2s ease;
+}
+
+.get-loan-btn:disabled {
+  background: #a0c4e5;
+  cursor: not-allowed;
+}
+
+.get-loan-btn:hover:not(:disabled) {
+  background: #155a8a;
+}
+
+/* ---------------- Till Info Card ---------------- */
+.till-info-card h3 {
+  color: #1b6ca8;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.till-info-card p {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+/* ---------------- Steps ---------------- */
+.payment-steps {
+  list-style-type: decimal;
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+
+.payment-steps li {
+  margin-bottom: 10px;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+/* Highlight important text in steps */
+.payment-steps strong {
+  color: #1b6ca8;
+}
+
+/* ---------------- Buttons ---------------- */
+.copy-btn {
+  width: 100%;
+  padding: 12px 0;
+  margin-bottom: 10px;
+  background: linear-gradient(to right, #a0eb38, #4caf50);
+  border: none;
+  border-radius: 8px;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.copy-btn:hover {
+  opacity: 0.9;
+}
+
+.verify-btn {
+  width: 100%;
+  padding: 12px 0;
+  background: #1b6ca8;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.verify-btn:hover {
+  background: #155a8a;
+}
+
+/* ---------------- Footer ---------------- */
+.till-info-card div {
+  text-align: center;
+  font-size: 0.85rem;
+  color: #555;
+  margin-top: 10px;
+}
+
+.till-info-card div span {
+  text-decoration: underline;
+  cursor: pointer;
+  color: #1b6ca8;
+}
+
+/* ---------------- Responsive ---------------- */
+@media screen and (max-width: 500px) {
+  .approval-card {
+    padding: 15px 20px;
+  }
+
+  .loan-option-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .loan-option-card div:last-child {
+    margin-top: 8px;
+  }
+}
+
+
+/* 🔢 Progress */
+.progress-steps {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8rem;
+  margin-bottom: 10px;
+}
+
+.progress-steps span {
+  color: #999;
+}
+
+.progress-steps .active {
+  color: #1b6ca8;
+  font-weight: bold;
+}
+
+/* 💎 Loan micro-animations */
+.loan-option-card {
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.loan-option-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+
+.loan-option-card.selected {
+  border-left: 4px solid #1b6ca8;
+}
+
+/* 🟢 / 🔴 Parsing */
+.parse-success {
+  background: #e6ffed;
+  color: #1b7f3c;
+  padding: 8px 12px;
+  border-radius: 6px;
+  margin-top: 8px;
+  font-size: 0.85rem;
+}
+
+.parse-error {
+  background: #ffe6e6;
+  color: #a11;
+  padding: 8px 12px;
+  border-radius: 6px;
+  margin-top: 8px;
+  font-size: 0.85rem;
+}
+
+/* 🚀 Disabled button */
+.get-loan-btn:disabled {
+  background: #cbd6e2;
+  cursor: not-allowed;
+}
+
+/* ✅ Success */
+.success-card {
+  text-align: center;
+  padding: 20px;
+  background: #f0f9ff;
+  border-radius: 12px;
+}
+
+.footer-note {
+  margin-top: 15px;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* Pay via Till Button */
+.pay-via-till-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  padding: 12px 0;
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-bottom: 15px;
+  transition: all 0.2s ease;
+}
+
+.pay-via-till-btn:hover {
+  background-color: #45a049;
+}
+
+.mpesa-logo {
+  width: 24px;
+  height: 24px;
+}
+
+/* Manual Payment Card */
+.manual-payment-card {
+  background: #fff7e6;
+  border: 1px solid #ffd580;
+  padding: 15px 20px;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.manual-payment-card h4 {
+  margin-bottom: 10px;
+  color: #c97f00;
+  text-align: center;
+}
+
+.manual-payment-card p {
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
+
+.manual-payment-card textarea {
+  width: 100%;
+  min-height: 80px;
+  margin-bottom: 10px;
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  resize: vertical;
+}
+

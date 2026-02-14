@@ -1,0 +1,122 @@
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 120px 20px 80px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Badge */
+.hero-badge {
+  background: #f1f5f9;
+  color: #0f172a;
+  padding: 8px 16px;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 24px;
+  transition: transform 0.3s ease;
+}
+
+.hero-badge:hover {
+  transform: scale(1.05);
+}
+
+/* Title */
+.hero-title {
+  font-size: 56px;
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -1px;
+  margin-bottom: 24px;
+}
+
+/* Subtitle */
+.hero-subtitle {
+  font-size: 18px;
+  color: #475569;
+  max-width: 700px;
+  margin-bottom: 40px;
+}
+
+/* Buttons */
+.hero-actions {
+  display: flex;
+  gap: 16px;
+}
+
+/* Primary Button */
+.hero-primary {
+  background: #2563eb;
+  color: white;
+  padding: 14px 26px;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  transition: all 0.25s ease;
+}
+
+.hero-primary:hover {
+  background: #1e40af;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(37, 99, 235, 0.25);
+}
+
+/* Secondary Button */
+.hero-secondary {
+  background: white;
+  color: #0f172a;
+  padding: 14px 26px;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  border: 1px solid #e5e7eb;
+  transition: all 0.25s ease;
+}
+
+.hero-secondary:hover {
+  background: #f8fafc;
+  transform: translateY(-2px);
+}
+
+/* =======================
+   RESPONSIVE DESIGN
+   ======================= */
+
+/* Tablet */
+@media (max-width: 900px) {
+  .hero-title {
+    font-size: 44px;
+  }
+
+  .hero-subtitle {
+    font-size: 17px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .hero {
+    padding: 90px 16px 60px;
+  }
+
+  .hero-title {
+    font-size: 34px;
+  }
+
+  .hero-subtitle {
+    font-size: 16px;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .hero-primary,
+  .hero-secondary {
+    width: 100%;
+  }
+}
