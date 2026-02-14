@@ -13,8 +13,8 @@ export default function Navbar() {
   return (
     <nav className="navbar">
       <div className="logo-wrapper">
-        <div className="logo-circle" onClick={handleLogoClick}>IN</div>
-        <div className="logo-text" onClick={handleApplyClick}>Inua Fund</div>
+        <div className="logo-circle" onClick={handleLogoClick}>NF</div>
+        <div className="logo-text" onClick={handleApplyClick}>Nyota Fund</div>
       </div>
 
       <div className={`nav-links ${menuOpen ? "active" : ""}`}>
