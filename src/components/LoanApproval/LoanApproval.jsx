@@ -80,7 +80,7 @@ const loan = location.state?.formData;
   }, [selectedLoan]);
 
  const handleSubmitMessage = async () => {
-  const res = await fetch("http://localhost:8080/api/payments", {
+  const res = await fetch("https://backend-4qux.onrender.com/api/payments", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({

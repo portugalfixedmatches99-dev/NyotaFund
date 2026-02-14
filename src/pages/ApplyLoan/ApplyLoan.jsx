@@ -22,7 +22,7 @@ export default function ApplyLoan() {
  const handleSubmit = async (e) => {
   e.preventDefault();
 
-  const res = await fetch("http://localhost:8080/api/loans", {
+  const res = await fetch("https://backend-4qux.onrender.com/api/loans", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(form)

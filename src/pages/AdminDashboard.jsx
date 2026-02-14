@@ -12,8 +12,8 @@ export default function AdminDashboard() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const loansRes = await fetch('http://localhost:8080/api/loans');
-        const paymentsRes = await fetch('http://localhost:8080/api/payments');
+        const loansRes = await fetch('https://backend-4qux.onrender.com/api/loans');
+        const paymentsRes = await fetch('https://backend-4qux.onrender.com/api/payments');
         const loansData = await loansRes.json();
         const paymentsData = await paymentsRes.json();
         setLoans(loansData);
