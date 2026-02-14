@@ -99,3 +99,58 @@
     gap: 15px;
   }
 }
+
+
+/* Hide hamburger on desktop */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background: #2563eb;
+  border-radius: 2px;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 15px 20px;
+    flex-wrap: wrap; /* allow wrapping */
+  }
+
+  /* Hide nav-links and actions by default */
+  .nav-links,
+  .nav-actions {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  /* Show when menu is active */
+  .nav-links.active,
+  .nav-actions.active {
+    display: flex;
+  }
+
+  /* Show hamburger */
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-links li {
+    text-align: center;
+    padding: 10px 0;
+    font-size: 18px;
+  }
+
+  .nav-actions button {
+    width: 100%;
+  }
+}
