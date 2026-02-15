@@ -154,3 +154,16 @@ td.mpesa-message {
 }
 
 
+.btn-delete {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.btn-delete:hover {
+  background-color: #c82333;
+}
